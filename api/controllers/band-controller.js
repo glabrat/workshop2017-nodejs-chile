@@ -7,6 +7,11 @@ class BandControllerClass {
             .then(documents => res.json(documents))
             .catch(error => res.json({error: error.message}));
     }
+    getArtists (req, res) {
+        return bandModel.getArtists(req.params.id)
+            .then(documents => res.json(documents))
+            .catch(error => res.json({error: error.message}));
+    }
 }
 
 export const bandController = new BandControllerClass();

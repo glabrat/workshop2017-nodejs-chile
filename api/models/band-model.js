@@ -5,6 +5,9 @@ export class BandModelClass {
     getList () {
         return database.find({docType: docTypes.BAND})
     }
+    getArtists (id) {
+        return database.find({docType: docTypes.ARTIST, _id: ""})
+    }
 }
 
 
